@@ -17,7 +17,7 @@ namespace Client
 
         private static ILogger CreateLogger()
         {
-            return new LoggerConfiguration().WriteTo.Console().CreateLogger();
+            return new LoggerConfiguration().MinimumLevel.Debug().WriteTo.Console().CreateLogger();
         }
 
         public MyTcpClient() : this(CreateLogger()) { }
